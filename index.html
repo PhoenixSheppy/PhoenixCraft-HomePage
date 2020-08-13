@@ -44,168 +44,49 @@
     <nav id="sidebar-wrapper">
       <ul class="sidebar-nav">
         <li class="sidebar-brand">
-          <a class="js-scroll-trigger" href="#page-top">PhoenixCraft</a>
+          <a>PhoenixCraft</a>
+          <hr style="background-color:white !important; width:90% !important;"/>
+        </li>
+        <!-- Links -->
+        <li class="sidebar-nav-item">
+          <a href="https://dynmap.gsheps.net"><img style="height:40px;" src="img/icons/map-icon.png"> Dynmap</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#page-top">Home</a>
+          <a href="https://discord.gg/xxxxxx"><img style="height:40px;" src="img/icons/discord.png"> Discord Server</a>
         </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#features">Features</a>
-        </li> <!--Guess who, we're back!-->
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#serverstats">Server Information</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#contact">Contact</a>
-        </li>
+        <!-- Tack the contact / info to the bottom pls-->
+          <div class="fixed-bottom">
+            <li class="sidebar-nav-item">
+              <hr style="background-color:white !important; width:90% !important;"/>
+              <a href="mailto:admin@gsheps.net"><img style="height:40px;" src="img/icons/mail.png"> Contact us!</a>
+            </li>
+          </div>
       </ul>
     </nav>
 
     <!-- Header -->
     <header class="masthead d-flex">
-      <div class="container text-center my-auto">
+      <div class="container text-center my-auto intro">
         <h1 class="mb-1 text-primary">PhoenixCraft</h1>
-        <h3 class="mb-1 text-primary">A Community Driven Minecraft Experience For Everyone!</h3>
-        <h5 class="mb-1 text-primary">Server IP: <em>minecraft.gsheps.net</em></h5>
-        <h5 class="mb-5 text-primary">Version: 1.15.2</h5>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Tell me more!</a>
+        <h3 class="mb-1 text-primary">An Enhanced SMP Minecraft Experience For Everyone!</h3>
+          <!-- Click-to-Copy totally stolen from RingoRaccoon, was lazy, deciphered what he was doing and tweaked it to suit my needs.-->
+          <div class="ip rounded" id="copy-ip" onclick="copyIp()">
+            <input type="text" id="ip-to-copy" value="mc.gsheps.net">
+            <span class="shown">IP: mc.gsheps.net</span>
+            <span class="hidden">Click to copy!</span>
+          </div>
+        <h4 class="mb-1 text-primary">Version 1.16.1</h4>
       </div>
       <div class="overlay"></div>
     </header>
 
-    <!-- About -->
-    <section class="content-section" id="about">
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h2>What is PhoenixCraft?</h2>
-            <p align="center" class="lead">Phoenixcraft, is a Minecraft server created with the idea to create memorable experiences for all of its players!</p>
-            <p align="center" class="lead">We offer a variety of unique gameplay aspects, as well as opportunities to create whatever you can imagine.</p>
-            <p align="center" class="lead"><strong>Notice:</strong> PhoenixCraft now requires user verification, in order to play, you <strong>MUST</strong> verify with us on our Discord server!</p>
-            <a style="margin-bottom:5px;" class="btn btn-dark btn-xl js-scroll-trigger" href="#features">Features</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features -->
-
-    <section class="content-section bg-primary text-white text-center" id="features">
-      <div class="container">
-        <div class="content-section-heading">
-          <h2 class="mb-5">Features</h2>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <img class="img-circle img-fluid" src="img/towny.png">
-            </span>
-            <h4>
-              <strong>SMP / Vanilla</strong>
-            </h4>
-            <p class="text-faded mb-0">The simplistic nature of SMP (Survival Multiplayer) makes it possible to whatever you want! Make a town, live on your own, it's up to you!</p>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <img class="img-circle img-fluid" src="img/minemap.png">
-            </span>
-            <h4>
-              <strong>Economy</strong>
-            </h4>
-            <p class="text-faded mb-0">PhoenixCraft as a unique take on it's economy as it's entirely player-based. No server/administration intervention at all, keeping all items obtained legitimate.</p>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <img class="img-circle img-fluid" src="img/multiserver.png">
-            </span>
-            <h4>
-              <strong>A Strong Community</strong>
-            </h4>
-            <p class="text-faded">PhoenixCraft takes pride in it's community, as you're all the ones who help drive the gameplay experience for yourselves! Without you, none of this would be possible!</p>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <img class="img-circle img-fluid" src="img/skyblock.png">
-            </span>
-            <h4>
-              <strong>Donor Roles</strong>
-            </h4>
-            <p class="text-faded"><em>New!</em><br/>Help support PhoenixCraft! By Donating you get access to a variety of commands and a bonus of $25,000!</em></p>
-          </div>
-        </div>
-      </div>
-      <a style="margin-top:50px;" class="btn btn-dark btn-xl js-scroll-trigger" href="#serverstats">Server Information</a>
-    </section>
-
-    <!-- Server Statistics -->
-    <section class="content-section bg-light" id="serverstats">
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h3>Server (Host) Information:</h3>
-            <p align="left" class="lead">PhoenixCraft is hosted locally in Saint Louis, MO on a Dell R710 via FTTP (Fiber to the premises) service under a hypersecure environment.</p>
-            <hr/>
-            <h5 align="left" class="text-primary">The server is operated in a VM allocated the following specifications:</h5>
-            <ul>
-              <li align="left" class="lead">Dual x5670 Xeon Processors (4 cores allocated)</li>
-              <li align="left" class="lead">18GB of server memory (16 allocated)</li>
-              <li align="left" class="lead">256GB+ (Expandable upon necessity)</li>
-              <li align="left" class="lead">Fibre optic internet access with speeds reaching 1000/1000 (Upload/Download)</li>
-            </ul>
-            <a style="margin-bottom:5px;" class="btn btn-dark btn-xl js-scroll-trigger" href="#contact">Contact</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Information -->
-    <section class="content-section bg-primary text-white" id="contact">
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h3>Contact Us:</h3>
-            <p align="center" class="lead">Need help? No problem!</p>
-            <hr/>
-            <h5 align="left" class="text-primary">Administration of PhoenixCraft is available via the following means:</h5>
-            <ul class="mb-5">
-              <li align="left" class="lead">Email us at: <a class="text-white" href="mailto:admin@gsheps.net">admin@gsheps.net</a></li>
-              <li align="left" class="lead">Contact an admin or moderator via the Discord server</li>
-              <li align="left" class="lead">Privately message an admin or moderator on the server with /msg</li>
-              <li align="left" class="lead">Speak up! We want to know if people are causing trouble. See something, say something!</li>
-              <li align="left" class="lead"><em>Interested in donating?</em> Message Phoenix#2432 or email admin@gsheps.net to get in touch!</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer text-center">
       <div class="container">
-        <ul class="list-inline mb-5">
-          <li class="list-inline-item">
-            <a class="social-link rounded-circle text-white mr-3" href="mailto:admin@gsheps.net">
-              <img style="height:30px; margin-bottom:10px;" src="img/icons/mail.png">
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a class="social-link rounded-circle text-white mr-3" href="https://discord.gg/F9zhq2a">
-              <img style="height:40px; margin-bottom:10px;" src="img/icons/discord.png">
-            </a>
-          </li>
-        </ul>
-        <p class="text-muted small mb-0"><em>Designed By: Phoenix Shepherd - 2020</em></p>
-        <p class="text-muted small mb-0">Be sure to check out my <a href="https://gsheps.net">website!</a></p>
+        <p class="text-muted small mb-0"><em>Website Designed By: Phoenix Shepherd - 2020</em></p>
+        <p class="text-muted small mb-0"><em>Operated and managed by <a href="https://phoenixnet.tech">PhoenixNet</a></em></p>
       </div>
     </footer>
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
-      <i class="fas fa-angle-up"></i>
-    </a>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -216,6 +97,9 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/stylish-portfolio.min.js"></script>
+
+    <!-- Click on IP Script, Thanks RingoRaccoon -->
+    <script src="js/scripts.js"></script>
 
   </body>
 
